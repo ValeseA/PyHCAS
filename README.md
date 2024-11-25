@@ -37,7 +37,7 @@ La funzione `transition` calcola i possibili stati successivi dati uno stato cor
 **Formula:**
 
 1. **Probabilità congiunte delle azioni:**  
-   \[ P(i, j) = P_{own}(i) \cdot P_{int}(j) \]
+   $$ P(i, j) = P_{own}(i) \cdot P_{int}(j) $$
    Dove \( i \) e \( j \) rappresentano gli indici delle azioni per ownship e intruder rispettivamente.
 
 2. **Dinamiche degli stati:** La dinamica è modellata usando:
