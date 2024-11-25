@@ -43,9 +43,9 @@ La funzione `transition` calcola i possibili stati successivi dati uno stato cor
    Dove \( i \) e \( j \) rappresentano gli indici delle azioni per ownship e intruder rispettivamente.
 
 2. **Dinamiche degli stati:** La dinamica è modellata usando:
-   \[
+   ```math
    (r', t', p', v_{own}', v_{int}') = \text{dynamics}(r, t, p, v_{own}, v_{int}, \text{ownTurn}, \text{intTurn}, pra)
-   \]
+   ```
 
 **Output:**
 
@@ -58,7 +58,9 @@ La funzione `rewards` calcola i benefici o i costi di una specifica azione in un
 
 **Definizione:**
 
-\[ R(s, a) = \text{Funzione basata su distanza e violazioni di sicurezza} \]
+```math
+R(s, a) = \text{Funzione basata su distanza e violazioni di sicurezza}
+```
 
 I dettagli sono implementati in `rewards.py`. Generalmente, il reward è negativo per situazioni che aumentano il rischio di collisione 
 o violano separazioni minime.
@@ -69,9 +71,9 @@ Il valore \( Q_a(s) \) rappresenta il valore cumulativo atteso di seguire una po
 
 **Formula:**
 
-\[
+```math
 Q_a(s) = R(s, a) + \gamma \sum_{s'} P(s'|s, a) \max_{a'} Q_{a'}(s')
-\]
+```
 
 Dove:
 
@@ -84,25 +86,25 @@ Dove:
 
 ### Transizioni
 
-\[
+```math
 P(s'|s, a) = P_{own}(i) \cdot P_{int}(j)
-\]
+```
 
-\[
+```math
 s' = \text{dynamics}(r, t, p, v_{own}, v_{int}, \text{ownTurn}, \text{intTurn}, pra)
-\]
+```
 
 ### Rewards
 
-\[
+```math
 R(s, a) = \text{Funzione basata su distanza e violazioni}
-\]
+```
 
 ### Calcolo del valore \( Q \)
 
-\[
+```math
 Q_a(s) = R(s, a) + \gamma \sum_{s'} P(s'|s, a) \max_{a'} Q_{a'}(s')
-\]
+```
 
 ---
 
