@@ -1,0 +1,22 @@
+Sistema tabelle; -> ok
+Controlla dati validi; -> ok
+Sistema legenda -> ok
+Controlla che prenda effettivamente il maggiore dei vari (nel plot) -> ok
+
+Capire come normalizzare; ... no minmax o z -> Non ha senso, l'importante è:
+
+1 - Guarda differenza tra max e min nelle varie righe (o la std), così capiamo la distribuzione:
+                                            - Prima di tutto controlla le x,y,psi per i vari picchi
+                                            - Sono continui tendenzialmente x,y,psi. Posto che tau incide:
+                                                    Ottieni i range di valori con diff più alta tra max e min. 
+                                            - In momenti critici è tanto più alta? ho dei picchi?
+                                            - In caso guarda in quei punti qual è la 
+                                                    distribuzione e usala come curva mdp
+                                            - Altimenti togli gli zeri e guarda 
+                                                    distribuzione dei punti rimasti
+
+2 - Usa le curve per MDP, quindi per definire le varie constants
+
+Capire se fare con simulazione;
+-> i dati sono casuali?
+-> modifica rewards -> volendo crei q table con altri metodi, simuli con aereini 
